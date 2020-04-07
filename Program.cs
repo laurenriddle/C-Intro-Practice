@@ -262,7 +262,7 @@ namespace bangazon
 
             foreach (KeyValuePair<string, List<string>> word in idioms) {
 
-                Console.WriteLine(word.Key);
+                Console.WriteLine($"{word.Key}: {String.Join(" ", word.Value)}");
 
             }
         }
