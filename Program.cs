@@ -87,8 +87,8 @@ namespace bangazon
             planetList.Add("Saturn");
 
             // print the new planets to confirm they are in the list
-            // Console.WriteLine(planetList[2]);
-            // Console.WriteLine(planetList[3]);
+            Console.WriteLine(planetList[2]);
+            Console.WriteLine(planetList[3]);
 
             // Create another List that contains that last two planets of our solar system.
             List<string> newPlanetList = new List<string>(){"Uranus", "Neptune"};
@@ -105,6 +105,7 @@ namespace bangazon
 
             // Now that all the planets are in the list, slice the list using GetRange() in order to extract the rocky planets into a new list called rockyPlanets. The rocky planets will remain in the original planets list.
             List<string> rockyPlanets = planetList.GetRange(0,4);
+
             // loop over each rocky planet
             foreach (string planet in rockyPlanets) {
                 // print each planet
@@ -113,10 +114,35 @@ namespace bangazon
 
             // Being good amateur astronomers, we know that Pluto is now a dwarf planet, so use the Remove() method to eliminate it from the end of planetList.
             planetList.Remove("Pluto");
+
             // loop over each planet
             foreach (string planet in planetList) {
                 // print each planet
                 Console.WriteLine(planet, "Planet List");
+            }
+
+
+            // RANDOM NUMBERS EXERCISE 
+
+            Random random = new Random();
+                List<int> numbers = new List<int> {
+                    random.Next(6),
+                    random.Next(6),
+                    random.Next(6),
+                    random.Next(6),
+                    random.Next(6),
+                    random.Next(6),
+            };
+
+            for (int i=0; i<numbers.Count; i++) {
+                 // Determine if the current loop index is contained inside of the `numbers` list. Print a message to the console indicating whether the index is in the list.
+      
+                 if (numbers.Contains(i)) {
+                      Console.WriteLine($"numbers list contains {i}");
+                 } else {
+                      Console.WriteLine($"numbers list does not contain {i}");
+                 } 
+   
             }
 
         }
