@@ -136,12 +136,11 @@ namespace bangazon
 
             for (int i=0; i<numbers.Count; i++) {
                  // Determine if the current loop index is contained inside of the `numbers` list. Print a message to the console indicating whether the index is in the list.
-                 Console.WriteLine($"{i} is the current number");
-                 Console.WriteLine(numbers.Contains(i));
-                 if (numbers.Contains(i) == false) {
-                      Console.WriteLine($"numbers list does not contain {numbers[i]}");
-                 } else if (numbers.Contains(i)) {
-                      Console.WriteLine($"numbers list contains {numbers[i]}");
+      
+                 if (numbers.Contains(i)) {
+                      Console.WriteLine($"numbers list contains {i}");
+                 } else {
+                      Console.WriteLine($"numbers list does not contain {i}");
                  } 
    
             }
